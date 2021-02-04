@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 import dj_database_url
+import django_on_heroku
 
 load_dotenv()
 
@@ -140,3 +141,5 @@ REST_FRAMEWORK = {
 }
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "client", "build", "static"),)
 #
+
+django_on_heroku.settings(locals()) # put this last
