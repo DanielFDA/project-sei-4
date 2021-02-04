@@ -23,7 +23,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -49,8 +48,6 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-
-ROOT_URLCONF = "project.urls"
 
 TEMPLATES = [
     {
@@ -125,7 +122,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = "/static/"
+
 
 AUTH_USER_MODEL = "jwt_auth.User"
 
@@ -139,7 +136,14 @@ REST_FRAMEWORK = {
     ),
     "DEFAULT_AUTHENTICATION_CLASSES": ["jwt_auth.authentication.JWTAuthentication"],
 }
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "client", "build", "static"),)
+
+ROOT_URLCONF = "project.urls"
+
+STATIC_URL = "/static/"
+
+STATICFILES_DIRS = (
+  os.path.join(BASE_DIR, "client", "build", "static"),
+)
 #
 
 django_on_heroku.settings(locals()) # put this last
