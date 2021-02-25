@@ -4,7 +4,6 @@
 * [Overview](#overview)
 * [Installation](#installation)
 * [Technologies Used](#technologies-used)
-* [Notable Bugs](#notable-bugs)
 * [Conclusion](#conclusion)
 	* [Wins and Challenges](#wins-and-challenges)
 	* [Some Learnings](#some-learnings)
