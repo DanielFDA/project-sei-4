@@ -44,7 +44,7 @@ const Bars = () => {
     const getData = async () => {
       try {
         const { data } = await getProfile()
-        // console.log(data)
+        // //console.log(data)
         setUserData(data)
       } catch (err) {
         console.log(err)
@@ -52,7 +52,7 @@ const Bars = () => {
     }
     getData()
   }, [])
-  // console.log(userData)
+  // //console.log(userData)
 
   return (
     <>

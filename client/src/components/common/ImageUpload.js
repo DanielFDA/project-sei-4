@@ -5,8 +5,8 @@ import { Button } from '@material-ui/core'
 const uploadUrl = process.env.REACT_APP_CLOUDINARY_URL
 const uploadPreset = process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET
 
-// console.log('upload',uploadUrl)
-// console.log(uploadPreset)
+// //console.log('upload',uploadUrl)
+// //console.log(uploadPreset)
 
 // 
 function ImageUpload({ value, name, onChange, buttonText }) {

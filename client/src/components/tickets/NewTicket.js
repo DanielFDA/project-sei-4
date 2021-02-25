@@ -104,7 +104,7 @@ function NewTicket() {
         const { data } = await getProfile()
         setUserdata(data)
         const response = await getSingleProject(id)
-        console.log('singleProject: ', response.data)
+        //console.log('singleProject: ', response.data)
         setMembers(response.data.members)
       } catch (err) {
         console.log(err)
@@ -117,11 +117,11 @@ function NewTicket() {
   // const users = response.filter(user => {
   //   return user.id !== userdata.id
   // })
-  // console.log('AFTER FILTER: ', newUsersToAdd)
+  // //console.log('AFTER FILTER: ', newUsersToAdd)
   // const usersWithoutOwner = users.filter(user => {
   //   return user.data.id !== 1
   // })
-  // console.log('usersWithout owner: ', usersWithoutOwner)
+  // //console.log('usersWithout owner: ', usersWithoutOwner)
 
 
 
@@ -129,12 +129,12 @@ function NewTicket() {
     e.preventDefault()
     try {
       setFormdata(formdata)
-      console.log(formdata)
+      //console.log(formdata)
       const { data } = await createTicket(formdata)
-      console.log(data.id)
+      //console.log(data.id)
       history.push(`/home/projects/${id}`)
     } catch (err) {
-      console.log(err.response.data)
+      //console.log(err.response.data)
       setError(err.response.data)
     }
   }
@@ -150,8 +150,8 @@ function NewTicket() {
     setFormdata(formData)
     setAnchorEl(null)
     // setFormdata({ ...formdata, [e.target.name]: e.target.value })
-    // console.log(e.target.value)
-    console.log(formdata)
+    // //console.log(e.target.value)
+    //console.log(formdata)
   }
 
 

@@ -53,10 +53,10 @@ function TicketsIndex() {
     const getData = async () => {
       try {
         const { data } = await getProfile()
-        console.log(data)
+        //console.log(data)
         setUser(data)
         const response = await getAllTickets()
-        console.log('response: ', response.data)
+        //console.log('response: ', response.data)
         setTickets(response.data)
       } catch (err) {
         console.log(err)
@@ -68,12 +68,12 @@ function TicketsIndex() {
   const myAssignedTickets = tickets.filter(ticket => {
     return ticket.assignedUser.user.id === user.id
   })
-  console.log('assigned tickets: ', myAssignedTickets)
+  //console.log('assigned tickets: ', myAssignedTickets)
 
   const myCreatedTickets = tickets.filter(ticket => {
     return ticket.userOwner.id === user.id
   })
-  console.log('owned tickets: ', myCreatedTickets)
+  //console.log('owned tickets: ', myCreatedTickets)
 
 
   return (

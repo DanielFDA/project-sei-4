@@ -41,7 +41,7 @@ function TicketRow(ticket) {
           {ticket.ticket.title}
         </TableCell>
         <TableCell align="right">{ticket.ticket.types}</TableCell>
-        {console.log('ticket data:', ticket)}
+        {/* {//console.log('ticket data:', ticket)} */}
         <TableCell align="right">{`${ticket.ticket.userOwner.firstName} ${ticket.ticket.userOwner.lastName}`}</TableCell>
         <TableCell align="right">{`${ticket.ticket.assignedUser.user.firstName} ${ticket.ticket.assignedUser.user.lastName}`}</TableCell>
         <TableCell align="right">{ticket.ticket.status}</TableCell>

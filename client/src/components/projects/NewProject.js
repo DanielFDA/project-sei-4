@@ -90,10 +90,9 @@ function NewProject() {
       try {
         const { data } = await getProfile()
         setUserdata(data)
-        console.log(userdata)
+        //console.log(userdata)
       } catch (err) {
         console.log(err)
-        return
       }
     }
     getData()
@@ -103,16 +102,16 @@ function NewProject() {
     e.preventDefault()
     try {
       const { data } = await createProject(formdata)
-      console.log(data.id)
+      //console.log(data.id)
       const response = await assignRoles([{
         user: userdata.id,
         project: data.id,
         role: 'Manager'
       }])
-      console.log(response)
+      //console.log(response)
       history.push(`/home/projects/${data.id}/roles`)
     } catch (err) {
-      console.log(err.response.data)
+      //console.log(err.response.data)
       setError(err.response.data)
     }
   }

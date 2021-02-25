@@ -58,13 +58,13 @@ function TicketShow() {
 
   //* get single item
   React.useEffect(() => {
-    // if (id) console.log('id', id)
+    // if (id) //console.log('id', id)
     if (!isAuthenticated) return
     const getData = async () => {
       try { 
         const { data } = await getProfile()
         setUser(data)
-        console.log(data)
+        //console.log(data)
 
         const response = await getAllTickets()
         setTickets(response.data)
@@ -73,7 +73,7 @@ function TicketShow() {
           return ticket.id === parseInt(id)
         })
         setCurrentTicket(myTicket)
-        console.log(myTicket)
+        //console.log(myTicket)
       } catch (err) {
         console.log(err)
       }
@@ -85,12 +85,12 @@ function TicketShow() {
   //   return ticket.id === id
   // })
   // setCurrentTicket(myTicket)
-  // console.log('my ticket: ', currentTicket)
+  // //console.log('my ticket: ', currentTicket)
 
   // function getUserId(){
   //   const payload = getPayload()
   //   if (!payload) return false
-  //   console.log( 'userId on pokeshow',payload.sub )
+  //   //console.log( 'userId on pokeshow',payload.sub )
   //   return payload.sub
   // }  
   // getUserId()

@@ -80,7 +80,7 @@ const TableUsers = ({ className, users, ...rest }) => {
       const response = await assignRoles(usersToAdd)
       history.push(`/home/projects/${id}`)
     } catch (err) {
-      console.log(err.response.data)
+      console.log(err)
     }
   }
 

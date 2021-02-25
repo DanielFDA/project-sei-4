@@ -56,13 +56,13 @@ function Register() {
 
     try {
       const response = await registerUser(formdata)
-      console.log(response)
-
+      // //console.log(response)
+      
       setTimeout(() => {
         history.push('/login')
       }, 500)
     } catch (err) {
-      console.log(err.response.data)
+      // //console.log(err.response.data)
       setErrors(err.response.data)
     }
   }

@@ -82,17 +82,17 @@ function PostComment() {
   const handleChange = (e) => {
     setFormdata({ ...formdata, [e.target.name]: e.target.value })
   }
-  console.log(formdata)
+  //console.log(formdata)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
 
       const response = await createComment(formdata)
-      console.log(response)
+      //console.log(response)
       history.push(`/home/projects/${id}`)
     } catch (err) {
-      console.log(err.response.data)
+      //console.log(err.response.data)
       setError(err.response.data)
     }
   }

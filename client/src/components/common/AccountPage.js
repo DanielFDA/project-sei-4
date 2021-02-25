@@ -58,10 +58,10 @@ function AccountPage() {
         const { data } = await getProfile()
         setFormdata(data)
       } catch (err) {
-        console.log(err)
+        //console.log(err)
         if (err.response.status === 401 || err.response.status === 403) {
           setUnauthorized(true)
-          console.log(unauthorized)
+          // //console.log(unauthorized)
           return
         }
       }
@@ -69,20 +69,20 @@ function AccountPage() {
     getData()
   }, [setFormdata])
 
-  console.log(formdata)
+  // //console.log(formdata)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
 
     try {
       const response = await updateUser(formdata)
-      console.log(response)
+      // //console.log(response)
 
       setTimeout(() => {
         history.push('/home')
       }, 500)
     } catch (err) {
-      console.log('err.response.data: ', err.response.data)
+      // //console.log('err.response.data: ', err.response.data)
       setErrors(err.response.data)
     }
   }

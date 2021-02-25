@@ -60,8 +60,8 @@ function Login() {
         password: err.response.data.detail
       }
       setErrors(errorobj)
-      console.log('err.response.data: ', err.response.data)
-      console.log('Errors: ', errors)
+      // //console.log('err.response.data: ', err.response.data)
+      // //console.log('Errors: ', errors)
     }
   }
 
