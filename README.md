@@ -71,6 +71,7 @@ and 2. start the front-end: `yarn start`
 * CSS
 * JavaScript (ES6)
 * HTML5
+* PostgreSQL
 * Python
 * Django
 * Material-UI
