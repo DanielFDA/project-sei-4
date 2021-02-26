@@ -65,7 +65,7 @@ then we are only missing 2 steps, 1. Install dependencies for the front-end for 
 ```bash 
 cd client && yarn
 ``` 
-and 2. start the front-end: `yarn start`
+and 2. start the front-end: `yarn start`.
 
 ## Technologies Used
 * CSS
@@ -86,13 +86,13 @@ and 2. start the front-end: `yarn start`
 
 ## Approach
 
-For this project I was working with [Alberto](https://github.com/albertocerrone)
+For this project I was working with [Alberto](https://github.com/albertocerrone).
 
-The first thing we discussed after deciding for a bug tracker app was how we wanted to make it and what framework we wanted to use to style it, cuz we had green light to choose it as we liked. In this instance we went for Material UI because Alberto had a strong interest in using it and getting more confident with it (he had previously used it throughout the course), for this I had no objection cuz I had heard about it and also wanted to see how it went, even thought Alberto worked most of the styling I got to play around with some things and also by watching the code after it was styled I got to understand a lot of how Material UI works and for this I thank Alberto cuz I learned more than I thought I would about it.
+The first thing we discussed after deciding for a bug tracker app was how we wanted to make it and what framework we wanted to use to style it, because we had green light to choose it as we liked. In this instance we went for Material UI because Alberto had a strong interest in using it and getting more confident with it (he had previously used it throughout the course), for this I had no objection because I had heard about it and also wanted to see how it went, even thought Alberto worked most of the styling I got to play around with some things and also by watching the code after it was styled I got to understand a lot of how Material UI works and for this I thank Alberto cuz I learned more than I thought I would about it.
 
 ### Explanations
 
-After deciding this we had to start working on the database diagram to get signed off on the project 
+After deciding this we had to start working on the database diagram to get signed off on the project.
 
 After lots of inputs from both Alberto, the Instructors and me, the diagram looked like this:
 
@@ -104,7 +104,7 @@ This meant that every user would be able to create a project while also being pa
 
 The diagram gave us a complex but big scope to be able to make the site as we wanted it, but would later prove to complicate some things a little more than needed. Even then we both agreed that it was the right way to do it because we can keep working and adding stuff on this site, thanks to having a robust back-end that allows us to create lots of functionality.
 
-After being signed off we started working on the backend where we both agreed that the both of us wanted to work on (mainly because in both of our cases, in our previous project we worked front-end, so we wanted to make sure that we were capable of doing the back-end parts of coding as well). So we began by creating the models and the basic relationships needed, heres some of them :
+After being signed off we started working on the backend where we both agreed that the both of us wanted to work on (mainly because in both of our cases, in our previous project we worked front-end, so we wanted to make sure that we were capable of doing the back-end parts of coding as well). So we began by creating the models and the basic relationships needed, heres some of them.
 
 ```py
 class User(AbstractUser):
@@ -217,7 +217,7 @@ class Ticket(models.Model):
 
 After these were set up and connected we needed the views to be able to get, create, update and delete information.
 
-These are long because we needed multiple in order to access all the data so I'm not going to show each specific one, I'll use the user views for this example:
+These are long because we needed multiple in order to access all the data so I'm not going to show each specific one, I'll use the user views for this example.
 
 ```py
 class RegisterView(APIView):
@@ -318,7 +318,7 @@ Last we have the ProfileListView and the ProfileDetailView, the ListView to show
 
 After setting up the back-end and doing some of the relationships we had to start the build the front-end for which inevitably we had to split, leaving Alberto to keep working on the back-end for a couple days and me to start setting up the front-end and adding some features.
 
-For this app you have to register/login in order to access it, to start with we set up the basic jsx and logic for the forms in both the register/login pages: 
+For this app you have to register/login in order to access it, to start with we set up the basic jsx and logic for the forms in both the register/login pages.
 
 ```js
 <form onSubmit={handleSubmit} className={classes.form}>
@@ -382,7 +382,7 @@ For this app you have to register/login in order to access it, to start with we 
 </form>
 ```
 
-and for the logic 
+And for the logic.
 
 ```js
   const history = useHistory()
@@ -413,9 +413,9 @@ and for the logic
   }
 ```
 
-All the credit from this custom Hook goes to the Instructor of my course at GA [Jack-May](https://github.com/Jack11709)
+All the credit from this custom Hook goes to the Instructor of my course at GA [Jack-May](https://github.com/Jack11709).
 
-What this did was make a post request with the details inputted into the formdata and make use of a custom hook useForm:
+What this did was make a post request with the details inputted into the formdata and make use of a custom hook useForm.
 
 ```js
 function useForm(intialState) {
@@ -446,7 +446,7 @@ function useForm(intialState) {
 
 This hook takes care of setting to state the values being inputted by the user in the form and also the errors that may come up.
 
-Then if it was succesful it would use the function setToken:
+Then if it was succesful it would use the function setToken.
 
 ```js
 export function setToken(token) {
@@ -458,7 +458,7 @@ to store in the browser the token coming from the back-end, then it would push t
 
 The error handling for this page was automatically done by Django, all we did was display the errors that Django would throw in case of invalid credentials.
 
-This is how it ended up looking after all the styling done by my partner:
+This is how it ended up looking after all the styling done by my partner.
 
 <p align="center" width="100%">
     <img width="93%" src="client/src/assets/login-page.png"> 
@@ -582,7 +582,7 @@ For the register page pretty much the same, except that this page has no actual 
 </form>
 ```
 
-and for the logic 
+And for the logic.
 
 ```js
   const { formdata, errors, handleChange, setErrors } = useForm({
@@ -616,13 +616,13 @@ Again using the custom hook useForm to set to state all the inputs and the error
 
 Then just making a post request to register an user with the inputted information and push this user to the login page if it is succesful, after 0.5s. If not succesful it would just display the error messages.
 
-This was the landing page where you got the option to Login or Register:
+This was the landing page where you got the option to Login or Register.
 
 <p align="center" width="100%">
     <img width="93%" src="client/src/assets/landing-page.png"> 
 </p>
 
-After login in, this was the home page 
+After login in, this was the home page.
 
 <p align="center" width="100%">
     <img width="93%" src="client/src/assets/home-page.png"> 
@@ -638,27 +638,27 @@ You can click on a project to go to the show page of that project with more deta
     <img width="93%" src="client/src/assets/show-page-projects.png"> 
 </p>
 
-Here you can see all the information about the project and all the tickets that have been created in it with their information as well, you can choose to reveal more information about a ticket if you want by clicky on the arrow 
+Here you can see all the information about the project and all the tickets that have been created in it with their information as well, you can choose to reveal more information about a ticket if you want by clicky on the arrow. 
 
 <p align="center" width="100%">
     <img width="80%" src="client/src/assets/tickets-information.png"> 
 </p>
 
-Then on the tickets tab
+Then on the tickets tab.
 
 <p align="center" width="100%">
     <img width="95%" src="client/src/assets/tickets-page.png"> 
 </p>
 
-Here you can see the index page for the tickets which shows you the tickets that are assigned to you and the tickets that you created
+Here you can see the index page for the tickets which shows you the tickets that are assigned to you and the tickets that you created.
 
-Lastly we have the Account page, that is designed to be a form in which you can update the information of your account if you so wish to do so
+Lastly we have the Account page, that is designed to be a form in which you can update the information of your account if you so wish to do so.
 
 <p align="center" width="100%">
     <img width="95%" src="client/src/assets/account-page.png"> 
 </p>
 
-All you have to do is change the information that you want and input your password and password confirmation and the page will send a put request to the API in order to update it 
+All you have to do is change the information that you want and input your password and password confirmation and the page will send a put request to the API in order to update it. 
 
 <p align="center" width="100%">
     <img width="80%" src="client/src/assets/account-page-gif.gif"> 
@@ -696,5 +696,5 @@ This being the first time working on a full-stack app meant that the beggining w
 
 All the process that took part in this project was very unique and special, we were very ambitious with the amount of functionality we wanted for the website but at the same time everyone was working very hard to achieve everything that we set up to do, due to the amount of work some of the features weren't completely polished and had to be left out of the deployed website but I feel like my teammates and I are very happy about the outcome of this project and I'm certainly very grateful of being part of it, it was a tiring but very enjoyable experience. -->
 
-
-[Index](#index)
+<!-- 
+[Index](#index) -->
