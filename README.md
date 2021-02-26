@@ -412,6 +412,8 @@ and for the logic
   }
 ```
 
+All the credit from this custom Hook goes to the Instructor of my course at GA [Jack-May](https://github.com/Jack11709)
+
 What this did was make a post request with the details inputted into the formdata and make use of a custom hook useForm:
 
 ```js
