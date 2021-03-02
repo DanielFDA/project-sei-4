@@ -1,5 +1,7 @@
 # sei project 4 - BugBuster
 
+You can check out the site [here](https://danielfda.github.io/sei-project-4/)
+
 ## Index
 * [Overview](#overview)
 * [Installation](#installation)
